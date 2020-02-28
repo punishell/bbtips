@@ -1,4 +1,5 @@
 # BugBounty Tips	
+Bugbounty Tips found on twitter #bugbountytips. 
 ### Recon
 ```
 Google the compay copyright footer to get more domains.
