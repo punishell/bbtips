@@ -15,6 +15,7 @@ When testing Rails Application add .json to url endpoints.
 ```
 Use exiftool to extract metadata from documents, it might reveal vulnerable htmltopdf generators
 Use cloud_enum to find open google buckets or azure accounts 
+Use Grep to extract endpoints with grep: grep -o -E '(https?://)?/?[{}a-z0-9A-Z_\.-]{2,}/[{}/a-z0-9A-Z_\.-]+'
 ```
 
 # Payloads
@@ -24,6 +25,7 @@ Use youtube(olx, etc...) videos with xss in names.
 Use round brackets to inject payload into valid e-mail address.
 X-Forwarded-For: ${payload}
 Use longstring parameters for stacktrace.
+WAFBYPASS ?page=";confirm`1`//   Rightwards -> 302; ?pag%65=";confirm`1`//   Rightwards -> 200 + XSS!
 ```
 
 Authentication & Autorization 
