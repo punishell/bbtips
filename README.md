@@ -28,7 +28,7 @@ Use longstring parameters for stacktrace.
 WAFBYPASS ?page=";confirm`1`//   Rightwards -> 302; ?pag%65=";confirm`1`//   Rightwards -> 200 + XSS!
 ```
 
-Authentication & Autorization 
+# Authentication & Autorization 
 ```
 UUID Idor Trick, Register user with the same name, it maybe return uuid.
 Try to bruteforce login endpoint. /login/${oauth_provider}, login/facebook, login/oauth/twitter login/oauth/v2/yahoo
