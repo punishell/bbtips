@@ -40,6 +40,7 @@ Set your birthday for today ot tomorrow to get discounts.
 Skip steps: /step/shipping ->  ~~/step/payment~~ -> /step/confirm
 Check does blackfriday coupon codes expires.
 Use blinf xss as password.
+Login to site using Facebook and try tochange userid during POST requests
 ```
 
 
