@@ -16,6 +16,7 @@ When testing Rails Application add .json to url endpoints.
 Use exiftool to extract metadata from documents, it might reveal vulnerable htmltopdf generators
 Use cloud_enum to find open google buckets or azure accounts 
 Use Grep to extract endpoints with grep: grep -o -E '(https?://)?/?[{}a-z0-9A-Z_\.-]{2,}/[{}/a-z0-9A-Z_\.-]+'
+Use WayBackmachine combined with paraminer or parameth
 ```
 
 # Payloads
