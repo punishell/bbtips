@@ -29,6 +29,7 @@ Use longstring parameters for stacktrace.
 WAFBYPASS ?page=";confirm`1`//   Rightwards -> 302; ?pag%65=";confirm`1`//   Rightwards -> 200 + XSS!
 When testing nodejs site add %ff at the end of url https://target.com/%ff, most of times cause error and return stacktrace with full path
 Add [] to name of parrameter: pwd= ->pwd[]=
+when interacting with dv try to put % in parameter  ?item=%
 ```
 
 # Authentication & Autorization 
