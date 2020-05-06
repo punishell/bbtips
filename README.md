@@ -46,6 +46,7 @@ Skip steps: /step/shipping ->  ~~/step/payment~~ -> /step/confirm
 Check does blackfriday coupon codes expires.
 Use blinf xss as password.
 Login to site using Facebook and try tochange userid during POST requests
+/api/v1/users/profile?id=MYID&id=ANOTHERUSERID -> HTTP 200 
 ```
 
 
