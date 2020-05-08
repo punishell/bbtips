@@ -30,7 +30,7 @@ Use longstring parameters for stacktrace.
 WAFBYPASS ?page=";confirm`1`//   Rightwards -> 302; ?pag%65=";confirm`1`//   Rightwards -> 200 + XSS!
 When testing nodejs site add %ff at the end of url https://target.com/%ff, most of times cause error and return stacktrace with full path
 Add [] to name of parrameter: pwd= ->pwd[]=
-when interacting with dv try to put % in parameter  ?item=%
+when interacting with db try to put % in parameter  ?item=%
 ```
 
 # Authentication & Autorization 
@@ -44,7 +44,7 @@ Do match and replace form false to true.
 Set your birthday for today ot tomorrow to get discounts.
 Skip steps: /step/shipping ->  ~~/step/payment~~ -> /step/confirm
 Check does blackfriday coupon codes expires.
-Use blinf xss as password.
+Use blind xss as password.
 Login to site using Facebook and try tochange userid during POST requests
 /api/v1/users/profile?id=MYID&id=ANOTHERUSERID -> HTTP 200 
 ```
