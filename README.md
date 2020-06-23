@@ -52,7 +52,7 @@ Login to site using Facebook and try tochange userid during POST requests
 /api/v1/users/profile?id=MYID&id=ANOTHERUSERID -> HTTP 200 
 ```
 
-# Email Adress input fuzz
+# Email Address input fuzz
 ```
 test+(<script>alert(1)</script>)@example.com
 test@example(<script>alert(1)</script>).com
