@@ -73,3 +73,33 @@ victim&email=attacker@example.com
 "%0d%0aContent-Lenght:%200@0d%0a%0d%0a"@example.com"recipient@test.com>\r\nRCPT TO:<victim+"@test.com
 ```
 
+# Top 25 LFI parameters
+
+```
+cat
+dir
+action
+board
+date
+detail
+file
+download
+path
+folder
+prefix
+include
+page
+incs
+locates
+show
+doc
+site
+type
+view
+content
+document
+layout
+mod
+conf
+```
+
