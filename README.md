@@ -13,7 +13,15 @@ cat file | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*"*
 curl http://host.xx/file.js | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*"* 
 grep -EHirn "accesskey|admin|aes|api_key|apikey|checkClientTrusted|crypt|http:|https:|password|pinning|secret|SHA256|SharedPreferences|superuser|token|X509TrustManager|insert into" APKfolder/
 ```
-
+# Subdomain Enumeration
+```
+sublist3r -d $1 -o $1.txt
+mkdir thirdlevel
+echo "Gathering full third-level domain with sublister"
+for domain in $(cat $1.txt); do sublist3r -d $domain -o thirdlevel/$domain.txt; cat thirdlevel/$domain.txt | sort -u >> final.txt; done 
+echo "Probing for alive third-levels..."
+cat final.txt | httprobe > probed.txt
+```
 # Tools
 ```
 Use exiftool to extract metadata from documents, it might reveal vulnerable htmltopdf generators
