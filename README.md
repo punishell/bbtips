@@ -245,7 +245,12 @@ cat domains | httpx -silent | subjs | anew
 ```
 cat file.js | grep -aoP "(?<=(\"|\'|\`))\/[a-zA-Z0-9_?&=\/\-\#\.]*(?=(\"|\'|\`))" | sort -u
 ```
+# Extract juicy data from js  
+```
+cat hosts | httpx -silent | subjs | anew | httpx -silent -sr -mc 200 
+grep -EHirn "accesskey|admn|aes|api_key|apikey|password|secret|token" ./output --color
 
+```
 # 403 bypass
 ```
 https://target.com/admin/ –> HTTP 302 (redirect to login page)
