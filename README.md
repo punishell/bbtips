@@ -408,3 +408,6 @@ console.log(e);
 </body>
 </html>
 ```
+
+### Reference
+https://gowsundar.gitbook.io/book-of-bugbounty-tips/
