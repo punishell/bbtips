@@ -464,6 +464,7 @@ https://nickbloor.co.uk/2017/08/13/attacking-java-deserialization/
 https://github.com/tyranid/ExploitRemotingService
 https://github.com/nccgroup/VulnerableDotNetHTTPRemoting
 https://github.com/pwntester/ysoserial.net/blob/master/README.md
+https://nickbloor.co.uk/2018/02/28/popping-wordpress/
 ```
 ### Reference
 https://gowsundar.gitbook.io/book-of-bugbounty-tips/
