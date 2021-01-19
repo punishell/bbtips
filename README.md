@@ -41,6 +41,10 @@ cat GREPABLENMAP.gnmap | grep 443/open | cut -d "(" -f 1 | cut -d : -f 2| tr -d 
 ```
 cat subdomains.txt | sed -E 's#https?://##I' | sed -E 's#/.*##' | sed -E 's#^\*\.?##' | sed -E 's#,#\n#g' | tr '[:upper:]' '[:lower:]' | uniq | sed -e 's/^/https:\/\//' | httpx -silent -timeout 2 -threads 100 -status-code -mc 200,302 |anew 
 ```
+# Filter ffuf output
+```
+cat * | jq | grep "url\"" | grep -v "replayproxyurl" |grep -v "proxyurl"  | grep -v "FUZZ" | cut -d \" -f4
+```
 
 # Tools
 ```
