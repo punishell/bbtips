@@ -249,6 +249,10 @@ cat domains_$1.txt | ~/go/bin/httprobe -p http:81 -p http:8080 -p https:8443 | w
 TBA 
 echo "http://tesla.com" | waybackurls | httpx -silent -timeout 2 -threads 100 | gf redirect | anew
 ```
+# Juicy GoogleDorks
+```
+site:example.com inurl:.cgi?
+```
 # File Upload and what to search
 ```
 ASP / ASPX / PHP5 / PHP / PHP3: Webshell / RCE
