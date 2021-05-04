@@ -533,8 +533,12 @@ https://blog.mindedsecurity.com/2018/10/from-path-traversal-to-source-code-in.ht
 https://soroush.secproject.com/blog/2019/04/exploiting-deserialisation-in-asp-net-via-viewstate/
 http://bit.ly/2NDZc73
 ```
-
+### Hacking IIS
+```
+https://www.youtube.com/watch?v=HrJW6Y9kHC4
+```
 ### Reference
 https://gowsundar.gitbook.io/book-of-bugbounty-tips/
+https://soroush.secproject.com/blog/
 
 
