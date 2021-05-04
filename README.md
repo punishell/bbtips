@@ -527,5 +527,14 @@ https://github.com/nccgroup/VulnerableDotNetHTTPRemoting
 https://github.com/pwntester/ysoserial.net/blob/master/README.md
 https://nickbloor.co.uk/2018/02/28/popping-wordpress/
 ```
+### From Path Traversal to Source Code in Asp.NET MVC Applications
+```
+https://blog.mindedsecurity.com/2018/10/from-path-traversal-to-source-code-in.html
+https://soroush.secproject.com/blog/2019/04/exploiting-deserialisation-in-asp-net-via-viewstate/
+http://bit.ly/2NDZc73
+```
+
 ### Reference
 https://gowsundar.gitbook.io/book-of-bugbounty-tips/
+
+
