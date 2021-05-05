@@ -542,3 +542,8 @@ https://gowsundar.gitbook.io/book-of-bugbounty-tips/
 https://soroush.secproject.com/blog/
 
 
+### Random
+```
+https://regex-generator.olafneumann.org/
+https://regex101.com/
+```
