@@ -5,6 +5,10 @@
 ;/
 ;/..;/
 ~/
+webstat
+webstat-ssl
+ftpstat
+anon_ftpstat
 0admin/
 0.htpasswd
 0manager/
