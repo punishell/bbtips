@@ -113,6 +113,7 @@ abs/
 abton/spaw2/dialogs/dialog.php
 acceptance_config.yml
 acceso
+Telerik.Web.UI.WebResource.axd
 acceso.php
 .access
 access
