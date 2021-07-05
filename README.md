@@ -405,7 +405,7 @@ Response:
 HTTP/1.1 200 OK
 {"success":"true","token":"596a96-cc7bf-9108c-d896f-33c44a-edc8a"}
 ```
-# Generate wordlis for target
+# Generate wordlist for target
 ```
 echo "bugcrowd.com" | subfinder -silent | hakrawler -plain -usewayback -scope yolo | sed $'s/[./?=:&#]/\\n/g' | anew
 ```
