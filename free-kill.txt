@@ -5240,3 +5240,5 @@ zone-h.php
 zp
 zp/zp
 .zsh_history
+openam/ccversion/Version
+/openam/oauth2/..;/ccversion/Version
