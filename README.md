@@ -507,7 +507,11 @@ Host: evil.com
 Link received:
 https://evil.com/reset-link=1g2f3guy23g
 ```
+### Find hostsname form given IP
 
+```
+echo 192.168.69.69 | cero
+```
 
 ### XSS Post Message POC
 ```
