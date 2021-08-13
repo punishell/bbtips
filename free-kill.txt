@@ -1051,6 +1051,7 @@ cache-downloads
 cachemgr.cgi
 cache/sql_error_latest.cgi
 cacti/
+cacti/cacti.sql
 cadmins/
 Cakefile
 Capfile
