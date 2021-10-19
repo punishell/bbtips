@@ -2,10 +2,10 @@
 Collection of `#bugbountytips` from twitter.
 # Recon
 ```
-Google the compay copyright footer to get more domains.
-Use whoxy.com to perform reverse whois lookups with the email used to regioster the main domain/
+Google the company copyright footer to get more domains.
+Use whoxy.com to perform reverse whois lookups with the email used to register the main domain/
 Search for slide,docs,demos and video tutorials by your target. Manny innocent examples could leak juicy endpoints.
-Use OpenSSL to get certificates. They can contain valuable info and common names form fidning more subdomains.
+Use OpenSSL to get certificates. They can contain valuable info and common names form finding more subdomains.
 Try to recreate data from deleted accounts by siging up with the old email address.
 Check text version of HTML e-mail for template injections
 When testing Rails Application add .json to url endpoints.
