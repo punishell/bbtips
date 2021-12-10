@@ -1,5 +1,5 @@
 # BugBounty Tips	
-Collection of `#bugbountytips` from twitter.
+Collection of `#bugbountytips` from twitter and my bash-jutsu.
 # Recon
 ```
 Google the company copyright footer to get more domains.
