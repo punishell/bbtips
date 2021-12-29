@@ -12,6 +12,7 @@ When testing Rails Application add .json to url endpoints.
 cat file | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*"*
 curl http://host.xx/file.js | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*"* 
 grep -EHirn "accesskey|admin|aes|api_key|apikey|checkClientTrusted|crypt|http:|https:|password|pinning|secret|SHA256|SharedPreferences|superuser|token|X509TrustManager|insert into" APKfolder/
+check *.cloudapp.azure.com subdomains for possible development instances of applications. (ex: companyname-appname.eastus.cloudapp.azure.com) (also check subdomains in different regions ex: westus instead of eastus)
 ```
 
 # Subdomain Enumeration
