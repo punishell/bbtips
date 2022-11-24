@@ -573,7 +573,7 @@ https://www.youtube.com/watch?v=HrJW6Y9kHC4
 cat hosts.live | gau -b ttf,woff,svg,png,jpg,gif,css,jpeg,pdf,zip,gz | tee -a hosts.gau
 ```
 
-### CLI Hacking Cheatsheet GAU
+### CLI Hacking Cheatsheet
 Getting JS from live hosts
 ```
 cat hosts.httprobe | getJS --complete | tee -a hosts.httprobe.js
