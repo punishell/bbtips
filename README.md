@@ -569,7 +569,9 @@ https://www.youtube.com/watch?v=HrJW6Y9kHC4
 
 
 ### Geting endpoints from web-archive
+```
 cat hosts.live | gau -b ttf,woff,svg,png,jpg,gif,css,jpeg,pdf,zip,gz | tee -a hosts.gau
+```
 
 ### CLI Hacking Cheatsheet GAU
 Getting JS from live hosts
