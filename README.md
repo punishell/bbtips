@@ -566,13 +566,47 @@ http://bit.ly/2NDZc73
 ```
 https://www.youtube.com/watch?v=HrJW6Y9kHC4
 ```
-### Reference
-https://gowsundar.gitbook.io/book-of-bugbounty-tips/
-https://soroush.secproject.com/blog/
 
+
+### Geting endpoints from web-archive
+cat hosts.live | gau -b ttf,woff,svg,png,jpg,gif,css,jpeg,pdf,zip,gz | tee -a hosts.gau
+
+### CLI Hacking Cheatsheet GAU
+Getting JS from live hosts
+```
+cat hosts.httprobe | getJS --complete | tee -a hosts.httprobe.js
+cat hosts.httprobe | gau | tee -a hosts.httprobe.gau
+cat hosts.httprobe.gau |grep -iE '\.js'|grep -ivE '\.json'|sort -u >> hosts.httprobe.js # cat hosts.httprobe.gau | unfurl format %s://%d%p |grep -iE '\.js'|grep -ivE '\.json'|sort -u
+cat hosts.httprobe.js | sort -u >> hosts.httprobe.js.sorted
+cat hosts.httprobe.js.sorted|cut -d \? -f1 | sort -u | httpx -mc 200 | tee -a hosts.httprobe.js.sorted.200
+cat hosts.httprobe.js.sorted.200 |  httpx -silent -sr -mc 200 
+```
+Searching for RXSS
+```
+cat hosts.httprobe | gau | tee -a hosts.httprobe.gau
+cat hosts.httprobe.gau | unfurl format %s://%d%p | sort -u | tee -a hosts.httprobe.gau.unfurl 
+cat hosts.httprobe.gau.unfurl  | httpx -mc 200 | tee -a hosts.httprobe.gau.unfurl.200
+cat hosts.httprobe.gau.unfurl.200 | dalfox pipe -o hosts.httprobe | tee -a hosts.httprobe.gau.unfurl.200.dalfox
+```
+Geting endpoints with potential hackable parameters
+```
+cat hosts.httprobe | cut -d / -f 3 |gau -b css,png,jpeg,jpg,svg,gif,wolf,pdf,txt,ptt,gz,zip,csv | tee -a  hosts.httprobe.gau 
+cat hosts.httprobe.gau | grep -E 'asp|aspx|cgi|jsp|php|sql'| unfurl format %s://%d%p | sort -u | tee -a hosts.httprobe.gau.unfurl.ext
+for i in `cat hosts.httprobe.gau.unfurl.ext`; do  grep $i hosts.httprobe.gau | grep \? | head -n1  | tee -a hosts.httprobe.gau.unfurl.ext.filtred ; done
+cat hosts.httprobe.gau.unfurl.cgi.filtred | httpx -mc 200 | tee -a hosts.httprobe.gau.unfurl.cgi.filtred.200
+```
+Bruteforcing juicy endpoints
+```
+for i in `cat hosts.httprobe.filtred `; do ffuf -w /payloads/free-kill.txt -u $i/FUZZ -of json -o qh-output/`echo $i | cut -d / -f3` -mc 200 -fl 1 -ac ; done
+for i in `ls qh-output/`; do cat qh-output/$i | python -m json.tool | grep "url\"" | grep -v "replayproxyurl" |grep -v "proxyurl"  | grep -v "FUZZ" | cut -d \" -f4 >> qh-urls.txt;done 
+```
 
 ### Random
 ```
 https://regex-generator.olafneumann.org/
 https://regex101.com/
 ```
+
+### Reference
+https://gowsundar.gitbook.io/book-of-bugbounty-tips/
+https://soroush.secproject.com/blog/
