@@ -11,7 +11,7 @@ Check text version of HTML e-mail for template injections
 When testing Rails Application add .json to url endpoints.
 cat file | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*"*
 curl http://host.xx/file.js | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*"* 
-grep -EHirn "accesskey|admin|aes|api_key|apikey|checkClientTrusted|crypt|http:|https:|password|pinning|secret|SHA256|SharedPreferences|superuser|token|X509TrustManager|insert into" APKfolder/
+grep -EHirn "accesskey|admin|aes|api_key|apikey|checkClientTrusted|crypt|http:|https:|password|pinning|secret|SHA256|SharedPreferences|superuser|token|X509TrustManager|insert into|DB_USER|DB_PASSWORD" folder/
 ```
 
 # Subdomain Enumeration
