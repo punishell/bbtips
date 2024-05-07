@@ -1,0 +1,6 @@
+/graphql
+/altair
+/playground
+&debug=1
+/v1/graphql
+/V2/graphql
