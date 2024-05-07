@@ -362,6 +362,9 @@ cat file.js | grep -aoP "(?<=(\"|\'|\`))\/[a-zA-Z0-9_?&=\/\-\#\.]*(?=(\"|\'|\`))
 cat hosts | httpx -silent | subjs | anew | httpx -silent -sr -mc 200 
 grep -EHirn "accesskey|admn|aes|api_key|apikey|password|secret|token" ./output --color
 
+echo https://example.com/ | subjs |tee -a recon
+for i in `cat recon`; do python3 SecretFinder.py -i $i -o cli;done
+
 ```
 # 403 bypass
 ```
