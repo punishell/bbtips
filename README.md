@@ -46,6 +46,13 @@ cat subdomains.txt | sed -E 's#https?://##I' | sed -E 's#/.*##' | sed -E 's#^\*\
 cat * | jq | grep "url\"" | grep -v "replayproxyurl" |grep -v "proxyurl"  | grep -v "FUZZ" | cut -d \" -f4
 ```
 
+# Extract juicy data from js  
+```
+go install -v github.com/punishell/gofinder@v0.1.1
+echo example.com | assetfinder | httprobe| subjs | gofinder
+
+```
+
 # Tools
 ```
 Use exiftool to extract metadata from documents, it might reveal vulnerable htmltopdf generators
@@ -357,15 +364,7 @@ cat domains | httpx -silent | subjs | anew
 ```
 cat file.js | grep -aoP "(?<=(\"|\'|\`))\/[a-zA-Z0-9_?&=\/\-\#\.]*(?=(\"|\'|\`))" | sort -u
 ```
-# Extract juicy data from js  
-```
-go install -v github.com/punishell/gofinder@v0.1.1
-echo example.com | assetfinder | httprobe| subjs | gofinder
 
-echo https://example.com/ | subjs |tee -a recon
-for i in `cat recon`; do python3 SecretFinder.py -i $i -o cli;done
-
-```
 # 403 bypass
 ```
 https://target.com/admin/ –> HTTP 302 (redirect to login page)
