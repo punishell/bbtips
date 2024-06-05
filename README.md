@@ -359,8 +359,8 @@ cat file.js | grep -aoP "(?<=(\"|\'|\`))\/[a-zA-Z0-9_?&=\/\-\#\.]*(?=(\"|\'|\`))
 ```
 # Extract juicy data from js  
 ```
-cat hosts | httpx -silent | subjs | anew | httpx -silent -sr -mc 200 
-grep -EHirn "accesskey|admn|aes|api_key|apikey|password|secret|token" ./output --color
+go install -v github.com/punishell/gofinder@v0.1.1
+echo example.com | assetfinder | httprobe| subjs | gofinder
 
 echo https://example.com/ | subjs |tee -a recon
 for i in `cat recon`; do python3 SecretFinder.py -i $i -o cli;done
