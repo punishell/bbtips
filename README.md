@@ -75,6 +75,7 @@ Redirect bypass %26next=http://example.com
 When testing nodejs site add %ff at the end of url https://target.com/%ff, most of times cause error and return stacktrace with full path
 Add [] to name of parrameter: pwd= ->pwd[]=
 when interacting with db try to put % in parameter  ?item=%
+exiftool -Comment="\"><script>alert(prompt('XSS '))</script>" image.jpg
 ```
 
 # Authentication & Autorization 
